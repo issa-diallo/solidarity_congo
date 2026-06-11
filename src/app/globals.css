@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+:root {
+  --sc-blue-950: #001743;
+  --sc-blue-900: #012062;
+  --sc-blue-800: #01398b;
+  --sc-blue-700: #0346a0;
+  --sc-blue-500: #016ed8;
+  --sc-blue-300: #38a9ff;
+  --sc-yellow-500: #efe80f;
+  --sc-yellow-300: #f5f15b;
+  --sc-red-600: #d91524;
+  --sc-orange-500: #ff7a1a;
+  --sc-cyan-500: #05a7e8;
+  --sc-white: #f0f1ec;
+  --sc-mist: #a1a8b9;
+  --sc-steel: #5a6a8e;
+  --sc-shadow: #07142c;
+  --sc-black: #030711;
+  --sc-ink: #10251f;
+  --sc-paper: #f5f0e5;
+  --sc-cream: #fffaf0;
+  --sc-clay: #bd2a1d;
+  --sc-gold: #e1c65a;
+}
+
+@theme inline {
+  --color-sc-blue-950: var(--sc-blue-950);
+  --color-sc-blue-900: var(--sc-blue-900);
+  --color-sc-blue-800: var(--sc-blue-800);
+  --color-sc-blue-700: var(--sc-blue-700);
+  --color-sc-blue-500: var(--sc-blue-500);
+  --color-sc-blue-300: var(--sc-blue-300);
+  --color-sc-yellow-500: var(--sc-yellow-500);
+  --color-sc-yellow-300: var(--sc-yellow-300);
+  --color-sc-red-600: var(--sc-red-600);
+  --color-sc-orange-500: var(--sc-orange-500);
+  --color-sc-cyan-500: var(--sc-cyan-500);
+  --color-sc-white: var(--sc-white);
+  --color-sc-mist: var(--sc-mist);
+  --color-sc-steel: var(--sc-steel);
+  --color-sc-shadow: var(--sc-shadow);
+  --color-sc-black: var(--sc-black);
+
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --font-body: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --radius-sc-sm: 4px;
+  --radius-sc-md: 8px;
+  --radius-sc-pill: 999px;
+
+  --shadow-sc-soft: 0 20px 60px rgba(0, 0, 0, .28);
+  --shadow-sc-hard: 0 10px 0 rgba(7, 20, 44, .95);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  background: var(--sc-white);
+}
+
+body {
+  margin: 0;
+  color: var(--sc-blue-950);
+  font-family: var(--font-body);
+  background: var(--sc-white);
+  overflow-x: hidden;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(rgba(1, 32, 98, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 32, 98, .06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 76%);
+}
+
+::selection {
+  color: var(--sc-white);
+  background: var(--sc-red-600);
+}
+
+.font-serif {
+  font-family: var(--font-heading);
+}
+
+.shadow-title {
+  text-shadow: 0 8px 0 rgba(7, 20, 44, .85);
+}
+
+.shadow-display {
+  text-shadow:
+    0 7px 0 #8a9040,
+    0 16px 0 var(--sc-shadow),
+    0 28px 36px rgba(0, 0, 0, .38);
+}
+
+.blue-wave::after {
+  position: absolute;
+  left: 50%;
+  bottom: -32px;
+  width: 140vw;
+  height: 150px;
+  content: "";
+  border: 28px solid rgba(1, 110, 216, .38);
+  border-top: 0;
+  border-radius: 0 0 50% 50%;
+  transform: translateX(-50%) rotate(6deg);
+  pointer-events: none;
+}
