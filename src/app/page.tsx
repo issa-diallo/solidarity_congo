@@ -9,6 +9,8 @@ import {
   Music2,
   ShieldCheck,
 } from "lucide-react";
+import { LogoMark } from "@/design-system";
+import { assetPath } from "@/design-system/lib/asset-path";
 
 const redistributionSteps = [
   {
@@ -62,8 +64,8 @@ export default function Home() {
     <main className="min-h-screen bg-sc-white text-sc-blue-950">
       <header className="sticky top-0 z-50 border-b border-sc-yellow-500/25 bg-sc-blue-950 px-5 py-4 text-sc-white md:px-8">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-5">
-          <a className="font-black uppercase" href="#top">
-            Solidarite Congo
+          <a className="flex min-w-0 items-center" href="#top" aria-label="Solidarite Congo">
+            <LogoMark className="shrink-0" priority size="xs" />
           </a>
           <div className="hidden items-center gap-7 text-xs font-bold uppercase text-sc-white/70 md:flex">
             <a className="transition hover:text-sc-yellow-500" href="#cause">
@@ -116,7 +118,7 @@ export default function Home() {
               priority
               unoptimized
               sizes="(min-width: 1024px) 54vw, 100vw"
-              src="/images/solidarite-congo-hero-resilience.png"
+              src={assetPath("/images/solidarite-congo-hero-resilience.png")}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-sc-blue-950 via-sc-blue-950/12 to-transparent" />
             <div className="absolute left-0 top-0 h-5 w-full bg-sc-red-600" />
@@ -143,7 +145,7 @@ export default function Home() {
               className="h-full w-full object-cover"
               fill
               sizes="(min-width: 1024px) 52vw, 100vw"
-              src="/images/solidarite-congo-collectif-soutien.png"
+              src={assetPath("/images/solidarite-congo-collectif-soutien.png")}
             />
           </div>
 
@@ -176,7 +178,7 @@ export default function Home() {
           className="-z-10 h-full w-full object-cover opacity-75"
           fill
           sizes="100vw"
-          src="/images/solidarite-congo-concert-solidarite.png"
+          src={assetPath("/images/solidarite-congo-concert-solidarite.png")}
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-sc-blue-950 via-sc-blue-950/70 to-sc-blue-950/12" />
         <div className="mx-auto flex min-h-[500px] max-w-7xl items-end">
@@ -282,7 +284,7 @@ export default function Home() {
 
       <footer className="bg-sc-black px-5 py-10 text-sc-white md:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-5 text-sm md:flex-row">
-          <p className="font-black uppercase">Solidarite Congo</p>
+          <LogoMark size="xs" />
           <p className="text-sc-white/62">Festival Couleur Cafe - Bruxelles - 28 juin 2026</p>
         </div>
       </footer>

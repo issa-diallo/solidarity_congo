@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { cn } from "../lib/cn";
+import { assetPath } from "../lib/asset-path";
 
 type LogoMarkSize = "xs" | "sm" | "md" | "lg";
 
 const sizes: Record<LogoMarkSize, string> = {
-  xs: "size-9",
-  sm: "size-14",
-  md: "size-20",
-  lg: "size-28",
+  xs: "h-10 w-8",
+  sm: "h-14 w-11",
+  md: "h-20 w-16",
+  lg: "h-28 w-[5.6rem]",
 };
 
 export function LogoMark({
@@ -22,16 +23,16 @@ export function LogoMark({
   return (
     <span
       className={cn(
-        "relative inline-block overflow-hidden rounded-full bg-sc-blue-950 shadow-sm ring-1 ring-sc-blue-800/20",
+        "relative inline-block overflow-hidden bg-transparent",
         sizes[size],
         className,
       )}
     >
       <Image
-        src="/logo-congo-solidarite.jpeg"
+        src={assetPath("/logo-congo-solidarite.jpeg")}
         alt="Solidarite Congo"
         fill
-        className="object-cover"
+        className="object-contain"
         priority={priority}
         sizes="112px"
       />

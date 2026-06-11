@@ -5,6 +5,9 @@ const repositoryName = "solidarity_congo";
 
 const nextConfig: NextConfig = {
   basePath: isGitHubActions ? `/${repositoryName}` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGitHubActions ? `/${repositoryName}` : "",
+  },
   images: {
     unoptimized: true,
   },
