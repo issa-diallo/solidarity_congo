@@ -1,7 +1,7 @@
 export { Badge } from "./components/badge";
 export { Button } from "./components/button";
 export { Card } from "./components/card";
-export { LogoMark } from "./components/logo-mark";
+export { LogoLockup, LogoMark } from "./components/logo-mark";
 export { SectionHeading } from "./components/section-heading";
 export { SlashMark } from "./components/slash-mark";
 export { Spinner } from "./components/spinner";

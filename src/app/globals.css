@@ -41,9 +41,13 @@
   --color-sc-steel: var(--sc-steel);
   --color-sc-shadow: var(--sc-shadow);
   --color-sc-black: var(--sc-black);
+  --color-sc-paper: var(--sc-paper);
+  --color-sc-cream: var(--sc-cream);
+  --color-sc-clay: var(--sc-clay);
+  --color-sc-gold: var(--sc-gold);
 
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-heading: Georgia, "Times New Roman", serif;
+  --font-display: "Avenir Next", Avenir, "Montserrat", "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-heading: "Avenir Next", Avenir, "Montserrat", "Segoe UI", Helvetica, Arial, sans-serif;
   --font-body: "Avenir Next", Avenir, "Segoe UI", Helvetica, Arial, sans-serif;
 
   --radius-sc-sm: 4px;
@@ -93,6 +97,15 @@ body::before {
 
 .font-serif {
   font-family: var(--font-heading);
+}
+
+.sc-texture {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .06) 1px, transparent 1px),
+    radial-gradient(circle at 18% 24%, rgba(239, 232, 15, .16), transparent 22%),
+    radial-gradient(circle at 78% 18%, rgba(5, 167, 232, .2), transparent 24%);
+  background-size: 32px 32px, 32px 32px, 100% 100%, 100% 100%;
 }
 
 .shadow-title {
