@@ -359,7 +359,7 @@ export default function DesignSystemPage() {
         <Section title="Identity Motifs">
           <div className="grid gap-3 md:grid-cols-2">
             <SpecCard>
-              <Label>Slash mark</Label>
+              <Label>Griffe</Label>
               <div className="flex h-28 items-center justify-center rounded-sm bg-slate-50">
                 <SlashMark />
               </div>

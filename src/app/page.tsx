@@ -82,9 +82,9 @@ export default function Home() {
         />
         <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_50%_18%,rgba(239,232,15,.22),transparent_22%),radial-gradient(circle_at_15%_72%,rgba(5,167,232,.34),transparent_28%),linear-gradient(180deg,rgba(0,23,67,.9)_0%,rgba(0,23,67,.8)_46%,rgba(0,23,67,.97)_100%)]" />
         <div className="absolute inset-0 -z-10 opacity-[0.28] sc-texture" />
-        <div className="absolute left-[-8vw] top-40 -z-10 h-48 w-[42vw] rotate-[-18deg] bg-sc-yellow-500/90 blur-[1px]" />
-        <div className="absolute right-[-16vw] top-28 -z-10 h-56 w-[42vw] rotate-[18deg] bg-sc-cyan-500/78 blur-[1px]" />
-        <div className="absolute bottom-0 left-1/2 -z-10 h-44 w-[120vw] -translate-x-1/2 rotate-[-3deg] border-y-[28px] border-sc-blue-500/50" />
+        <div className="absolute left-[-8vw] top-40 -z-10 hidden h-48 w-[42vw] rotate-[-18deg] bg-sc-yellow-500/90 blur-[1px] md:block" />
+        <div className="absolute right-[-16vw] top-28 -z-10 hidden h-56 w-[42vw] rotate-[18deg] bg-sc-cyan-500/78 blur-[1px] md:block" />
+        <div className="absolute bottom-0 left-1/2 -z-10 hidden h-44 w-[120vw] -translate-x-1/2 rotate-[-3deg] border-y-[28px] border-sc-blue-500/50 md:block" />
         <div className="absolute bottom-24 right-[7vw] hidden rotate-[-10deg] rounded-sc-pill bg-sc-red-600 px-6 py-3 text-sm font-black uppercase tracking-[0.16em] text-sc-white shadow-[0_12px_40px_rgba(0,0,0,.28)] lg:block">
           live solidaire
         </div>
@@ -92,8 +92,8 @@ export default function Home() {
           main stage
         </div>
 
-        <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pb-12 pt-28 text-center md:px-8 md:pt-32">
-          <LogoLockup className="mb-8" priority size="hero" />
+        <div className="mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 pb-12 pt-24 text-center md:px-8 md:pt-32">
+          <LogoLockup className="mb-8 hidden md:inline-block" priority size="hero" />
           <div className="flex flex-wrap items-center justify-center gap-3 text-[10px] font-black uppercase tracking-[0.18em] text-sc-yellow-500 md:text-[11px]">
             <span className="rounded-sc-pill border border-sc-yellow-500/50 bg-sc-blue-950/58 px-4 py-2 backdrop-blur">
               Couleur Cafe
@@ -106,7 +106,7 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="mt-8 max-w-5xl text-[clamp(2.75rem,7vw,7.25rem)] font-black uppercase leading-[0.86] tracking-normal text-sc-white shadow-title">
+          <h1 className="mt-7 max-w-5xl text-[clamp(2.75rem,7vw,7.25rem)] font-black uppercase leading-[0.86] tracking-normal text-sc-white shadow-title md:mt-8">
             Concert
             <span className="block text-sc-yellow-500">solidaire</span>
           </h1>
@@ -188,7 +188,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="impact" className="bg-sc-blue-950 px-4 py-16 text-sc-white md:px-8 md:py-24">
+      <section id="impact" className="sc-logo-blue-bg px-4 py-16 text-sc-white md:px-8 md:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-[.8fr_1.2fr] md:items-end">
             <div>

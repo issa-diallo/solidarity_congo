@@ -1,13 +1,17 @@
+import Image from "next/image";
 import { cn } from "../lib/cn";
+import { assetPath } from "../lib/asset-path";
 
 export function SlashMark({ className }: { className?: string }) {
   return (
-    <div className={cn("flex h-24 items-center justify-center gap-1.5", className)} aria-hidden>
-      <i className="h-14 w-3 skew-x-[-18deg] rounded-sm bg-sc-cyan-500 shadow-[0_0_0_2px_#07142c]" />
-      <i className="h-[74px] w-3 skew-x-[-18deg] rounded-sm bg-sc-yellow-500 shadow-[0_0_0_2px_#07142c]" />
-      <i className="h-20 w-3 skew-x-[-18deg] rounded-sm bg-sc-red-600 shadow-[0_0_0_2px_#07142c]" />
-      <i className="h-[74px] w-3 skew-x-[-18deg] rounded-sm bg-sc-orange-500 shadow-[0_0_0_2px_#07142c]" />
-      <i className="h-14 w-3 skew-x-[-18deg] rounded-sm bg-sc-cyan-500 shadow-[0_0_0_2px_#07142c]" />
+    <div className={cn("relative h-24 w-24", className)} aria-hidden>
+      <Image
+        src={assetPath("/griffe.png")}
+        alt=""
+        fill
+        className="object-contain drop-shadow-[0_2px_0_rgba(7,20,44,.55)]"
+        sizes="96px"
+      />
     </div>
   );
 }
